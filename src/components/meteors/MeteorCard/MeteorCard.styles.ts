@@ -11,8 +11,7 @@ export const meteorCard = styled.div`
   max-width: 250px;
 
   &:hover {
-    background: #e6e6e6;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    background: #666;
   }
 `;
 

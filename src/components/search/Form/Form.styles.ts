@@ -10,7 +10,7 @@ export const formContainer = styled.form`
   text-align: center;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  width: max(60vw, 600px);
+  width: min(100%, 1000px);
   height: max(10vh, 100px);
 `;
 
