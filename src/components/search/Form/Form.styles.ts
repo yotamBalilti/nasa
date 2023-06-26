@@ -5,12 +5,12 @@ export const formContainer = styled.form`
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  background-color: #666666;
+  background-color: #555;
   color: #e6e6e6;
   text-align: center;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  width: max(50vw, 400px);
+  width: max(60vw, 600px);
   height: max(10vh, 100px);
 `;
 
@@ -45,6 +45,7 @@ export const dataList = styled.datalist`
   background-color: #e6e6e6;
   color: #282c34;
   font-size: 0.6rem;
+  border: 0 none;
 `;
 
 export const dataListOption = styled.option`
@@ -54,6 +55,12 @@ export const dataListOption = styled.option`
   color: #282c34;
   font-size: 0.6rem;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #282c34;
+    color: #e6e6e6;
+  }
 `;
 
 export const formButtonsContainer = styled.div`

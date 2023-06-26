@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useSetRecoilState, useRecoilValue } from 'recoil';
+import { useSetRecoilState } from 'recoil';
 import { MeteorsGrid } from './components/meteors/MeteorsGrid';
-import {
-  meteorsListState,
-  filteredMeteorsState,
-  nextAvailableResultState,
-  yearState,
-} from './components/state';
+import { meteorsListState } from './components/state';
 import * as Styled from './App.styles';
 import { Form } from './components/search/Form';
 

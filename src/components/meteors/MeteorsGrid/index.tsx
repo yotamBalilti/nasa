@@ -6,6 +6,7 @@ import {
   yearState,
 } from '../../state';
 import { MeteorCard } from '../MeteorCard';
+import * as Styled from './MeteorsGrid.styles';
 
 export const MeteorsGrid = () => {
   const filteredMeteors = useRecoilValue(filteredMeteorsState);
@@ -38,19 +39,25 @@ export const MeteorsGrid = () => {
   }, [error, nextYear, setYear]);
 
   return (
-    <div className='gridContainer'>
-      {showError && <p className='error'>{error}</p>}
+    <Styled.meteorsGridContainer>
+      {showError && (
+        <Styled.meteorsGridErrorSubtitle>
+          {error}
+        </Styled.meteorsGridErrorSubtitle>
+      )}
       {!filteredMeteors && <p>No meteors found</p>}
       {!showError && filteredMeteors && (
         <>
-          <h3>{filteredMeteors?.length} meteors found!</h3>
-          <div className='meteorsGrid'>
+          <Styled.meteorsGridTitle>
+            {filteredMeteors?.length} meteors found!
+          </Styled.meteorsGridTitle>
+          <Styled.meteorsGrid>
             {filteredMeteors.map((meteor) => (
               <MeteorCard meteor={meteor} key={meteor.id} />
             ))}
-          </div>
+          </Styled.meteorsGrid>
         </>
       )}
-    </div>
+    </Styled.meteorsGridContainer>
   );
 };

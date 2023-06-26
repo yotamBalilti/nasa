@@ -1,4 +1,5 @@
 import { Meteor } from '../../types';
+import * as Styled from './MeteorCard.styles';
 
 interface IMeteorCardProps {
   meteor: Meteor;
@@ -6,14 +7,16 @@ interface IMeteorCardProps {
 
 export const MeteorCard = ({ meteor }: IMeteorCardProps) => {
   return (
-    <div className='meteorCard'>
-      <h2>{meteor.name}</h2>
-      <span>Mass: {meteor.mass}g</span>
-      <span>Year: {meteor.year.slice(0, 4)}</span>
-      <span>
-        {meteor?.geolocation?.coordinates[0]} /{' '}
-        {meteor?.geolocation?.coordinates[1]}
-      </span>
-    </div>
+    <Styled.meteorCard>
+      <Styled.meteorCardTitle>{meteor.name}</Styled.meteorCardTitle>
+      <Styled.meteorCardDetails>
+        <span>Year: {meteor.year.slice(0, 4)}</span>
+        <span>Mass: {meteor.mass}g</span>
+        <span>
+          {meteor?.geolocation?.coordinates[0]} /{' '}
+          {meteor?.geolocation?.coordinates[1]}
+        </span>
+      </Styled.meteorCardDetails>
+    </Styled.meteorCard>
   );
 };

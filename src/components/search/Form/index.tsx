@@ -14,7 +14,6 @@ export const Form = () => {
     e.preventDefault();
     setYear(tempYear);
     setMass(tempMass);
-    console.log(tempYear, tempMass);
   };
 
   const handleReset = () => {
@@ -36,6 +35,7 @@ export const Form = () => {
           onChange={(e) => setTempYear(e.target.value)}
           maxLength={4}
           value={tempYear}
+          autoComplete='off'
           required
         />
         <Styled.dataList id='meteorsDataList'>

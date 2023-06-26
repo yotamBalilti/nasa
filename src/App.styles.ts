@@ -5,7 +5,7 @@ export const appContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #282c34;
+  background-color: #222;
   min-height: 100vh;
   color: #e6e6e6;
   text-align: center;
