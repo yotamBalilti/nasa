@@ -7,7 +7,7 @@ export const appContainer = styled.div`
   justify-content: center;
   background-color: #282c34;
   min-height: 100vh;
-  color: white;
+  color: #e6e6e6;
   text-align: center;
 `;
 
