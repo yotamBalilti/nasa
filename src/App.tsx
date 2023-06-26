@@ -1,13 +1,17 @@
 import { useEffect, useState } from 'react';
 import { useSetRecoilState, useRecoilValue } from 'recoil';
 import { MeteorsGrid } from './components/meteors/MeteorsGrid';
-import { meteorsListState, yearFilteredMeteorsState } from './components/state';
+import {
+  meteorsListState,
+  filteredMeteorsState,
+  nextAvailableResultState,
+  yearState,
+} from './components/state';
 import * as Styled from './App.styles';
 import { Form } from './components/search/Form';
 
 function App() {
   const setMeteors = useSetRecoilState(meteorsListState);
-  const filteredMeteors = useRecoilValue(yearFilteredMeteorsState);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -27,7 +31,7 @@ function App() {
     <Styled.appContainer>
       <Styled.appTitle>NASA Meteor Search</Styled.appTitle>
       <Form />
-      {!loading && <MeteorsGrid results={filteredMeteors} />}
+      {!loading && <MeteorsGrid />}
     </Styled.appContainer>
   );
 }

@@ -31,17 +31,18 @@ export const Form = () => {
         <Styled.formInput
           list='meteorsDataList'
           id='yearListedMeteors'
+          type='number'
           name='year-choice'
           onChange={(e) => setTempYear(e.target.value)}
           maxLength={4}
           value={tempYear}
           required
         />
-        <datalist id='meteorsDataList'>
+        <Styled.dataList id='meteorsDataList'>
           {[...yearsDataList].sort()?.map((year, index) => (
-            <option value={year} key={index} />
+            <Styled.dataListOption value={year} key={index} />
           ))}
-        </datalist>
+        </Styled.dataList>
       </Styled.formInputContainer>
       <Styled.formInputContainer>
         <label htmlFor='mass'>And greater then: (in grams)</label>

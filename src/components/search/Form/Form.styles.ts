@@ -36,6 +36,26 @@ export const formInput = styled.input`
   padding-inline-start: 1rem;
 `;
 
+export const dataList = styled.datalist`
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  background-color: #e6e6e6;
+  color: #282c34;
+  font-size: 0.6rem;
+`;
+
+export const dataListOption = styled.option`
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #e6e6e6;
+  color: #282c34;
+  font-size: 0.6rem;
+  cursor: pointer;
+`;
+
 export const formButtonsContainer = styled.div`
   height: 100%;
   display: flex;
